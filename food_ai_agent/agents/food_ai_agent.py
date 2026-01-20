@@ -1,10 +1,10 @@
 from pydantic_ai import Agent 
-from tools.food_tools import getFoodItem, searchFoodName
+from tools.food_tools import getFoodItem, searchFoodName, searchRecipe
 from prompts.food_system_prompt import SYSTEM_PROMPT
 
 agent = Agent(
     model="ollama:qwen3:8b",
-    tools = [getFoodItem, searchFoodName],
+    tools = [getFoodItem, searchFoodName, searchRecipe],
     system_prompt = SYSTEM_PROMPT
 )
 
